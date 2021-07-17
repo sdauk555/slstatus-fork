@@ -67,6 +67,6 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ run_command, "[VOL %s%%] ", "/bin/sh -c \"amixer -D pulse get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },	
 	{ wifi_essid, "[NETWORK: %s] ", "wlp165s0" },
-	{ battery_perc, "[BATTERY: %3s%%] ", "BAT0" },
+	{ battery_perc, "[BATTERY:%3s%%] ", "BAT0" },
 	{ datetime, "%s",           "%b %_e %l:%M%_p " },
 };
