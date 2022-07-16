@@ -65,7 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "[VOLUME: %s%%] ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },	
+	//{ run_command, "[VOLUME: %s%%] ", "/bin/sh -c \"amixer get Master | tail -n1 | grep -Po '\\[\\K[^%]*' | head -n1\"" },
+	{ run_command, "[VOLUME: %s%%] ", "pamixer --get-volume" },	
 	{ wifi_essid, "[NETWORK: %s] ", "wlp165s0" },
 	{ battery_perc, "[BATTERY: %3s%%] ", "BAT0" },
 	{ datetime, "%s", "%b %_e %l:%M%_p " },
